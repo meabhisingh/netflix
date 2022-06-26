@@ -1,0 +1,124 @@
+$bg: rgb(16, 16, 16);
+
+.banner {
+  height: 600px;
+  background-color: $bg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: $bg;
+    opacity: 0.4;
+  }
+
+  h1,
+  p {
+    color: white;
+    font-size: 3rem;
+    width: 40%;
+    z-index: 10;
+  }
+  p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: 100;
+  }
+
+  > div {
+    display: flex;
+
+    button {
+      padding: 1rem;
+      width: 150px;
+      outline: none;
+      border: none;
+      z-index: 10;
+      border-radius: 5px;
+      margin: 1rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:nth-child(odd) {
+        background-color: white;
+        color: black;
+      }
+      &:nth-child(even) {
+        background-color: rgb(57, 57, 57);
+        color: rgb(255, 255, 255);
+      }
+      svg {
+        font-size: 1.7rem;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.row {
+  background-color: $bg;
+  padding: 1rem;
+
+  > h2 {
+    margin: 0.3rem;
+    font-weight: 400;
+  }
+
+  > div {
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+.card {
+  width: 200px;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.genreBox {
+  overflow-x: auto;
+  display: flex;
+  height: 100px;
+  background-color: $bg;
+  flex: 0%;
+  > a {
+    color: black;
+    background-color: white;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.5s;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    &:hover {
+      background-color: rgb(236, 236, 236);
+    }
+  }
+}
